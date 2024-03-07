@@ -1,0 +1,176 @@
+#include <stdio.h>
+#include <string.h>
+
+void sort_ascending(int arr[], int size) {
+
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+void sort_descending(int arr[], int size) {
+
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j] < arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int find_largest_in_an_array(int arr[], int size) {
+
+    int largest = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+    return largest;
+}
+
+int find_smallest_in_an_array(int arr[], int size) {
+
+    int smallest = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        }
+    }
+    return smallest;
+}
+
+void reverse_an_array(int arr[], int size) {
+
+    for (int i = 0; i < size / 2; i++) {
+        int temp = arr[i];
+        arr[i] = arr[size - i - 1];
+        arr[size - i - 1] = temp;
+    }
+}
+
+void merge_two_arrays(int arr1[], int size1, int arr2[], int size2, int merged[]) {
+
+    int i, j, k;
+    i = j = k = 0;
+
+    while (i < size1 && j < size2) {
+        if (arr1[i] <= arr2[j])
+            merged[k++] = arr1[i++];
+        else
+            merged[k++] = arr2[j++];
+    }
+
+    while (i < size1)
+        merged[k++] = arr1[i++];
+    while (j < size2)
+        merged[k++] = arr2[j++];
+}
+
+int sum_of_array(int arr[], int size) {
+
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+void split_the_array_in_two_parts(int arr[], int size, int splitIndex, int part1[], int part2[]) {
+
+    for (int i = 0; i < splitIndex; i++) {
+        part1[i] = arr[i];
+    }
+    for (int i = splitIndex; i < size; i++) {
+        part2[i - splitIndex] = arr[i];
+    }
+}
+
+int search_an_element_in_an_array(int arr[], int size, int key) {
+
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == key) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int find_no_of_even_numbers_in_an_array(int arr[], int size) {
+
+    int count = 0;
+    for (int i = 0; i < size; i++) {
+        if (arr[i] % 2 == 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+void reverse_a_string(char str[]) {
+
+    int length = strlen(str);
+    for (int i = 0; i < length / 2; i++) {
+        char temp = str[i];
+        str[i] = str[length - i - 1];
+        str[length - i - 1] = temp;
+    }
+}
+
+void convert_integer_to_string(int num, char str[]) {
+
+    sprintf(str, "%d", num);
+}
+
+int count_no_of_duplicate_elements_in_an_array(int arr[], int size) {
+
+    int count = 0;
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if (arr[i] == arr[j]) {
+                count++;
+                break;
+            }
+        }
+    }
+    return count;
+}
+
+void remove_element_from_an_array(int arr[], int *size, int index) {
+
+    if (index < 0 || index >= *size) {
+        printf("Invalid index\n");
+        return;
+    }
+
+    for (int i = index; i < *size - 1; i++) {
+        arr[i] = arr[i + 1];
+    }
+
+    (*size)--;
+}
+
+int find_no_of_spaces_in_a_string(char str[]) {
+
+    int count = 0;
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ' ') {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main() {
+
+    return 0;
+}
