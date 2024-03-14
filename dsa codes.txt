@@ -1,0 +1,354 @@
+Represent a point in space 2d
+
+#include <stdio.h>
+
+struct Point {
+    int x;
+    int y;
+};
+
+int main() {
+    struct Point p;
+    p.x = 5;
+    p.y = 10;
+    printf("Coordinates of the point: (%d, %d)\n", p.x, p.y);
+    return 0;
+}
+
+
+Rectangle Structure: Representing a rectangle with width, height, and coordinates of the top-left corner
+
+#include <stdio.h>
+
+struct Rectangle {
+    int x;
+    int y;
+    int width;
+    int height;
+};
+
+int main() {
+    struct Rectangle rect;
+    rect.x = 0;
+    rect.y = 0;
+    rect.width = 10;
+    rect.height = 5;
+    printf("Rectangle: x=%d, y=%d, width=%d, height=%d\n", rect.x, rect.y, rect.width, rect.height);
+    return 0;
+}
+
+
+
+Employee Structure: Storing information about an employee such as name, ID, and salary
+
+#include <stdio.h>
+
+struct Employee {
+    char name[100];
+    int ID;
+    float salary;
+};
+
+int main() {
+    struct Employee emp;
+    printf("Enter employee name: ");
+    scanf("%s", emp.name);
+    printf("Enter employee ID: ");
+    scanf("%d", &emp.ID);
+    printf("Enter employee salary: ");
+    scanf("%f", &emp.salary);
+    printf("Employee Details:\nName: %s\nID: %d\nSalary: %.2f\n", emp.name, emp.ID, emp.salary);
+    return 0;
+}
+
+
+
+
+
+Book Structure: Storing information about a book such as title, author, and ISBN
+
+#include <stdio.h>
+
+struct Book {
+    char title[100];
+    char author[100];
+    char ISBN[20];
+};
+
+int main() {
+    struct Book book;
+    printf("Enter book title: ");
+    scanf("%s", book.title);
+    printf("Enter book author: ");
+    scanf("%s", book.author);
+    printf("Enter book ISBN: ");
+    scanf("%s", book.ISBN);
+    printf("Book Details:\nTitle: %s\nAuthor: %s\nISBN: %s\n", book.title, book.author, book.ISBN);
+    return 0;
+}
+
+
+
+
+Student Structure: Storing information about a student such as name, roll number, and marks
+
+#include <stdio.h>
+
+struct Student {
+    char name[100];
+    int rollNumber;
+    float marks;
+};
+
+int main() {
+    struct Student student;
+    printf("Enter student name: ");
+    scanf("%s", student.name);
+    printf("Enter student roll number: ");
+    scanf("%d", &student.rollNumber);
+    printf("Enter student marks: ");
+    scanf("%f", &student.marks);
+    printf("Student Details:\nName: %s\nRoll Number: %d\nMarks: %.2f\n", student.name, student.rollNumber, student.marks);
+    return 0;
+}
+
+
+
+
+
+Car Structure: Storing information about a car such as make, model, and year
+#include <stdio.h>
+
+struct Car {
+    char make[100];
+    char model[100];
+    int year;
+};
+
+int main() {
+    struct Car car;
+    printf("Enter car make: ");
+    scanf("%s", car.make);
+    printf("Enter car model: ");
+    scanf("%s", car.model);
+    printf("Enter car year: ");
+    scanf("%d", &car.year);
+    printf("Car Details:\nMake: %s\nModel: %s\nYear: %d\n", car.make, car.model, car.year);
+    return 0;
+}
+
+
+
+
+Date Structure: Representing a date with day, month, and year
+
+#include <stdio.h>
+
+struct Date {
+    int day;
+    int month;
+    int year;
+};
+
+int main() {
+    struct Date date;
+    printf("Enter date (dd mm yyyy): ");
+    scanf("%d %d %d", &date.day, &date.month, &date.year);
+    printf("Date: %d/%d/%d\n", date.day, date.month, date.year);
+    return 0;
+}
+
+
+
+
+Complex Number Structure: Representing a complex number with real and imaginary parts
+
+#include <stdio.h>
+
+struct Complex {
+    float real;
+    float imag;
+};
+
+int main() {
+    struct Complex num;
+    printf("Enter real part: ");
+    scanf("%f", &num.real);
+    printf("Enter imaginary part: ");
+    scanf("%f", &num.imag);
+    printf("Complex number: %.2f + %.2fi\n", num.real, num.imag);
+    return 0;
+}
+
+
+
+
+
+Address Structure: Storing information about an address such as street, city, and zip code
+
+#include <stdio.h>
+
+struct Address {
+    char street[100];
+    char city[100];
+    char zipCode[20];
+};
+
+int main() {
+    struct Address addr;
+    printf("Enter street: ");
+    scanf("%s", addr.street);
+    printf("Enter city: ");
+    scanf("%s", addr.city);
+    printf("Enter zip code: ");
+    scanf("%s", addr.zipCode);
+    printf("Address Details:\nStreet: %s\nCity: %s\nZip Code: %s\n", addr.street, addr.city, addr.zipCode);
+    return 0;
+}
+
+
+
+
+
+
+Fraction Structure: Representing a fraction with numerator and denominator
+
+
+#include <stdio.h>
+
+struct Fraction {
+    int numerator;
+    int denominator;
+};
+
+int main() {
+    struct Fraction frac;
+    printf("Enter numerator: ");
+    scanf("%d", &frac.numerator);
+    printf("Enter denominator: ");
+    scanf("%d", &frac.denominator);
+    printf("Fraction: %d/%d\n", frac.numerator, frac.denominator);
+    return 0;
+}
+
+
+
+
+Time Structure: Representing time with hours, minutes, and seconds
+
+#include <stdio.h>
+
+struct Time {
+    int hours;
+    int minutes;
+    int seconds;
+};
+
+int main() {
+    struct Time t;
+    printf("Enter time (hh:mm:ss): ");
+    scanf("%d:%d:%d", &t.hours, &t.minutes, &t.seconds);
+    printf("Time: %02d:%02d:%02d\n", t.hours, t.minutes, t.seconds);
+    return 0;
+}
+
+
+Person Structure: Storing information about a person such as name, age, and gender
+#include <stdio.h>
+
+struct Person {
+    char name[100];
+    int age;
+    char gender;
+};
+
+int main() {
+    struct Person p;
+    printf("Enter name: ");
+    scanf("%s", p.name);
+    printf("Enter age: ");
+    scanf("%d", &p.age);
+    printf("Enter gender (M/F): ");
+    scanf(" %c", &p.gender);
+    printf("Person Details:\nName: %s\nAge: %d\nGender: %c\n", p.name, p.age, p.gender);
+    return 0;
+}
+
+
+Circle Structure: Representing a circle with radius and center coordinates
+
+#include <stdio.h>
+
+struct Circle {
+    float radius;
+    float centerX;
+    float centerY;
+};
+
+int main() {
+    struct Circle c;
+    printf("Enter radius: ");
+    scanf("%f", &c.radius);
+    printf("Enter x-coordinate of center: ");
+    scanf("%f", &c.centerX);
+    printf("Enter y-coordinate of center: ");
+    scanf("%f", &c.centerY);
+    printf("Circle Details:\nRadius: %.2f\nCenter: (%.2f, %.2f)\n", c.radius, c.centerX, c.centerY);
+    return 0;
+}
+
+
+
+Triangle Structure: Representing a triangle with three vertices
+
+#include <stdio.h>
+
+struct Point {
+    float x;
+    float y;
+};
+
+struct Triangle {
+    struct Point vertex1;
+    struct Point vertex2;
+    struct Point vertex3;
+};
+
+int main() {
+    struct Triangle t;
+    printf("Enter coordinates of vertex 1 (x y): ");
+    scanf("%f %f", &t.vertex1.x, &t.vertex1.y);
+    printf("Enter coordinates of vertex 2 (x y): ");
+    scanf("%f %f", &t.vertex2.x, &t.vertex2.y);
+    printf("Enter coordinates of vertex 3 (x y): ");
+    scanf("%f %f", &t.vertex3.x, &t.vertex3.y);
+    printf("Triangle Details:\nVertex 1: (%.2f, %.2f)\nVertex 2: (%.2f, %.2f)\nVertex 3: (%.2f, %.2f)\n",
+           t.vertex1.x, t.vertex1.y, t.vertex2.x, t.vertex2.y, t.vertex3.x, t.vertex3.y);
+    return 0;
+}
+
+
+Bank Account Structure: Storing information about a bank account such as account number, balance, and account holder's name
+
+
+#include <stdio.h>
+
+struct BankAccount {
+    int accountNumber;
+    float balance;
+    char holderName[100];
+};
+
+int main() {
+    struct BankAccount acc;
+    printf("Enter account number: ");
+    scanf("%d", &acc.accountNumber);
+    printf("Enter account holder's name: ");
+    scanf("%s", acc.holderName);
+    printf("Enter account balance: ");
+    scanf("%f", &acc.balance);
+    printf("Bank Account Details:\nAccount Number: %d\nHolder's Name: %s\nBalance: %.2f\n",
+           acc.accountNumber, acc.holderName, acc.balance);
+    return 0;
+}
+
